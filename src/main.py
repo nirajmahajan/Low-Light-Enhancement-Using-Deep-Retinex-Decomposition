@@ -76,8 +76,8 @@ trainset = LOLDataset(train = 'train', transform=train_transform, p_rot90 = 0.5,
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=TRAIN_BATCH_SIZE, shuffle = True)
 testset = LOLDataset(train = 'test', transform=test_transform, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = False)
 testloader = torch.utils.data.DataLoader(testset, batch_size=TEST_BATCH_SIZE, shuffle = False)
-unknonwset = LOLDataset(train = 'unknown', transform=test_transform, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = False)
-unknownloader = torch.utils.data.DataLoader(unknonwset, batch_size=TEST_BATCH_SIZE, shuffle = False)
+unknownwset = LOLDataset(train = 'unknown', transform=test_transform, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = False)
+unknownloader = torch.utils.data.DataLoader(unknownwset, batch_size=TEST_BATCH_SIZE, shuffle = False)
 model = LowLightEnhancer(optim_choice = 'Adam', lr = lr, device = device).to(device)
 
 if args.resume:
