@@ -6,9 +6,10 @@
 *.big
 __pycache__/
 dataset/
-datasets/
+# datasets/
 data/
 # checkpoints/
 # checkpoint/
 images/
+combined/
 image/
