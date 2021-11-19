@@ -10,7 +10,7 @@ Retinex models are an effective tool for low-light image enhancement. It assumes
 
 The paper proposes an end-to-end training pipeline, that works without ground truth labels of the reflectance and the illuminance of images, which greatly adds to the ease and convenience of the training process. The Qualitative results obtained on completely unknown images show that the method not only achieves good Low Light Enhancement, but also learns to decompose the image into reflectance and illuminance effectively, in a weakly supervised manner.
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/images/architecture.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/images/architecture.png)
 
 ## Setup
 
@@ -102,19 +102,19 @@ All our generated results can be found [here](https://github.com/nirajmahajan/Lo
 
 We have attached a few results here:
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/28.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/28.png)
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/35.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/35.png)
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/45.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/45.png)
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/48.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/48.png)
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/49.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/49.png)
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/50.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/50.png)
 
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/blob/master/results/unknown/51.png)
+![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/51.png)
 
 ## Team
 
