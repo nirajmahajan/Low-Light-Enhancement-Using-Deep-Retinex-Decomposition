@@ -56,12 +56,12 @@ torch.autograd.set_detect_anomaly(True)
 checkpoint_path = './checkpoints/'
 if not os.path.isdir(checkpoint_path):
     os.mkdir(checkpoint_path)
-if not os.path.isdir('./images/'):
-    os.mkdir('./images')
-if not os.path.isdir('./images/known'):
-    os.mkdir('./images/known')
-if not os.path.isdir('./images/unknown'):
-    os.mkdir('./images/unknown')
+if not os.path.isdir('../results/'):
+    os.mkdir('../results/')
+if not os.path.isdir('../results/known'):
+    os.mkdir('../results/known')
+if not os.path.isdir('../results/unknown'):
+    os.mkdir('../results/unknown')
 
 # train_transform = transforms.Compose([transforms.Resize((224,224))])
 test_transform = transforms.Compose([transforms.Resize((224,224))])
@@ -139,8 +139,8 @@ def evaluate(e, known = "True"):
                 im_ref -= im_ref.min()
                 im_ref /= im_ref.max()
 
-                plt.imsave("images/R.png", im_ref)
-                plt.imsave("images/I.png", im_ill, cmap = 'gray')
+                plt.imsave("../results/R.png", im_ref)
+                plt.imsave("../results/I.png", im_ill, cmap = 'gray')
                 
                 fig = plt.figure(figsize = (15,3))
                 plt.subplot(1,5,1)
@@ -164,7 +164,7 @@ def evaluate(e, known = "True"):
                 plt.title('Reflectance')
                 plt.axis('off')
                 plt.suptitle("After {} epochs".format(e))
-                plt.savefig('./images/{}/{}.png'.format(str_k, i+total))
+                plt.savefig('../results/{}/{}.png'.format(str_k, i+total))
                 plt.close('all')
             total += S_corrected.shape[0]
 

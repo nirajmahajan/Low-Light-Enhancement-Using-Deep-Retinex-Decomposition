@@ -10,7 +10,7 @@ import PIL
 from PIL import Image
 
 class LOLDataset(Dataset):
-    def __init__(self, train , path = '../../dataset/Combined', transform = None, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = 0):
+    def __init__(self, train , path = '../dataset/Combined', transform = None, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = 0):
         super(LOLDataset, self).__init__()
         self.patch_mode = patch_mode
         self.p_rot90 = p_rot90
