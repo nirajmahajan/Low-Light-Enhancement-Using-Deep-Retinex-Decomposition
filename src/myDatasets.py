@@ -30,7 +30,9 @@ class LOLDataset(Dataset):
         self.highpath = os.path.join(self.datapath, 'high')
         self.lowpath = os.path.join(self.datapath, 'low')
         self.high_names = os.listdir(self.highpath)
+        self.high_names.sort()
         self.low_names = os.listdir(self.lowpath)
+        self.low_names.sort()
         assert(self.high_names == self.low_names)
 
 
