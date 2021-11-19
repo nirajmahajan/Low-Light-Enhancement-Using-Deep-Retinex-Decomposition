@@ -5,7 +5,7 @@
 *.tgz
 *.big
 __pycache__/
-dataset/
+# dataset/
 # datasets/
 data/
 # checkpoints/
