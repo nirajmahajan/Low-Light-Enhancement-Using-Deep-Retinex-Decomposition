@@ -1,5 +1,5 @@
 *.tar
-*.pth
+# *.pth
 *.gz
 *.zip
 *.tgz
@@ -8,7 +8,7 @@ __pycache__/
 dataset/
 datasets/
 data/
-checkpoints/
-checkpoint/
+# checkpoints/
+# checkpoint/
 images/
 image/
