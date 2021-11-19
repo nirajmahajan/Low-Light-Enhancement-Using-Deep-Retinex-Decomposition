@@ -15,7 +15,7 @@
 | 11     | No patch size - Consider Entire Image                        | Failed    |
 | 12     | Patch size 144                                               | Failed    |
 | 13     | Patch size 120                                               | Mediocre  |
-| **14** | **Larger lambda for Reconstruction loss (S_high)**           | **Best**  |
+| 14     | Larger lambda for Reconstruction loss (S_high)               | Near Best |
 | 15     | Larger lambda for Smooth loss                                | Poor      |
 | 16     | detached backprop for Relight Loss                           | Failed    |
 | 17     | Complete connected backprop for Relight Loss                 | Failed    |
@@ -33,6 +33,6 @@
 | 29     | Experiment 14 with lower window size (32)                    | Mediocre  |
 | 30     | Experiment 14 with medium window size (64)                   | Mediocre  |
 | 31     | Experiment 14 with Sobel, less smooth                        | Mediocre  |
-| 32     | Experiment 14 with larger dataset (Brightness data included) | Near Best |
+| **32** | **Experiment 14 with larger dataset (Brightness data included)** | **Best**  |
 | 33     | Experiment 14 with more epochs                               | Better    |
 
