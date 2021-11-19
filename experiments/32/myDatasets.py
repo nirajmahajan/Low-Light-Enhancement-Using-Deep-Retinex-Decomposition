@@ -10,7 +10,7 @@ import PIL
 from PIL import Image
 
 class LOLDataset(Dataset):
-    def __init__(self, train , path = '../../dataset/Combined_backup', transform = None, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = 0):
+    def __init__(self, train , path = '../../dataset/Combined', transform = None, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = 0):
         super(LOLDataset, self).__init__()
         self.patch_mode = patch_mode
         self.p_rot90 = p_rot90
@@ -30,14 +30,16 @@ class LOLDataset(Dataset):
         self.highpath = os.path.join(self.datapath, 'high')
         self.lowpath = os.path.join(self.datapath, 'low')
         self.high_names = os.listdir(self.highpath)
+        self.high_names.sort()
         self.low_names = os.listdir(self.lowpath)
+        self.low_names.sort()
         assert(self.high_names == self.low_names)
 
 
     def __getitem__(self, i):
         patch_size = 96
-        low_data = torch.tensor(np.transpose(plt.imread(os.path.join(self.lowpath, self.low_names[i])),(2,0,1)))
-        high_data = torch.tensor(np.transpose(plt.imread(os.path.join(self.highpath, self.high_names[i])),(2,0,1)))
+        low_data = torch.tensor(np.transpose(plt.imread(os.path.join(self.lowpath, self.low_names[i]))[:,:,:3],(2,0,1)))
+        high_data = torch.tensor(np.transpose(plt.imread(os.path.join(self.highpath, self.high_names[i]))[:,:,:3],(2,0,1)))
         if self.transform is not None:
             low_data = self.transform(low_data)
             high_data = self.transform(high_data)

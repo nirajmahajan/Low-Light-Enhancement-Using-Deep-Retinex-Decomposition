@@ -71,9 +71,9 @@ train_transform = None
 trainset = LOLDataset(train = 'train', transform=train_transform, p_rot90 = 0.5, p_flipud = 0.5, p_fliplr = 0.5, patch_mode = True)
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=TRAIN_BATCH_SIZE, shuffle = True)
 testset = LOLDataset(train = 'test', transform=test_transform, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = False)
-testloader = torch.utils.data.DataLoader(testset, batch_size=TEST_BATCH_SIZE, shuffle = True)
+testloader = torch.utils.data.DataLoader(testset, batch_size=TEST_BATCH_SIZE, shuffle = False)
 unknonwset = LOLDataset(train = 'unknown', transform=test_transform, p_rot90 = 0, p_flipud = 0, p_fliplr = 0, patch_mode = False)
-unknownloader = torch.utils.data.DataLoader(unknonwset, batch_size=TEST_BATCH_SIZE, shuffle = True)
+unknownloader = torch.utils.data.DataLoader(unknonwset, batch_size=TEST_BATCH_SIZE, shuffle = False)
 model = LowLightEnhancer(optim_choice = 'Adam', lr = lr, device = device).to(device)
 
 if args.resume:
@@ -128,8 +128,8 @@ def evaluate(e, known = "True"):
                 im_corrected = S_corrected[i,:,:,:]
                 im_ill = Ihat[i,:,:,0]
                 im_ref = Rhat[i,:,:,:]
-                im_low -= im_low.min()
-                im_low /= im_low.max()
+                # im_low -= im_low.min()
+                # im_low /= im_low.max()
                 im_high -= im_high.min()
                 im_high /= im_high.max()
                 im_corrected -= im_corrected.min()
