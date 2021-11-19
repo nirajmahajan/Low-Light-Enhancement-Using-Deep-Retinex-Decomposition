@@ -64,7 +64,11 @@ if not os.path.isdir('../results/unknown'):
     os.mkdir('../results/unknown')
 
 # train_transform = transforms.Compose([transforms.Resize((224,224))])
-test_transform = transforms.Compose([transforms.Resize((224,224))])
+test_transform = transforms.Compose([
+    transforms.ToPILImage(),
+    transforms.Resize((224,224)),
+    transforms.ToTensor(),
+    ])
 train_transform = None
 # test_transform = None
 
@@ -139,8 +143,8 @@ def evaluate(e, known = "True"):
                 im_ref -= im_ref.min()
                 im_ref /= im_ref.max()
 
-                plt.imsave("../results/R.png", im_ref)
-                plt.imsave("../results/I.png", im_ill, cmap = 'gray')
+                # plt.imsave("../results/R.png", im_ref)
+                # plt.imsave("../results/I.png", im_ill, cmap = 'gray')
                 
                 fig = plt.figure(figsize = (15,3))
                 plt.subplot(1,5,1)
