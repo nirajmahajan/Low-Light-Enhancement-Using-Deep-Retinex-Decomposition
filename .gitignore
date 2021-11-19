@@ -1,0 +1,14 @@
+*.tar
+*.pth
+*.gz
+*.zip
+*.tgz
+*.big
+__pycache__/
+dataset/
+datasets/
+data/
+checkpoints/
+checkpoint/
+images/
+image/
