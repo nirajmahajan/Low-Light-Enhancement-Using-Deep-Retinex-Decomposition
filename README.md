@@ -93,7 +93,7 @@ We have further tuned the hyper parameters for the training by running over 30 e
 
 ## Results and Observations
 
-In this section, we have attached our own results after training the model from scratch. The trained model gave good results in almost all cases. But we also noticed that in a few cases the Illuminance misbehaved, ie, gave extremely high values which generated abnormally bright and cloudy images. 
+In this section, we have attached our own results after training the model from scratch. The trained model gave good results in almost all cases. But we also noticed that in very few cases the Illuminance misbehaved, ie, gave extremely high values which generated abnormally bright and cloudy images.
 
 All our generated results can be found [here](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/tree/master/results). We tested the performance on two separate sets of images:
 
@@ -111,10 +111,6 @@ We have attached a few results here:
 ![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/48.png)
 
 ![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/49.png)
-
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/50.png)
-
-![](https://github.com/nirajmahajan/Low-Light-Enhancement-Using-Deep-Retinex-Decomposition/blob/master/results/unknown/51.png)
 
 ## Team
 
