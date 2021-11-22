@@ -79,9 +79,9 @@ The code can be run using the following command:
 
 ```bash
 $ cd src/
-$ python3 main.py --cuda <gpu id>							# Start Training
+$ python3 main.py --cuda <gpu id>					# Start Training
 # The gpu_id must be set -1 in case training on CPU
-$ python3 main.py --cuda <gpu id> --resume 					# Resume Training
+$ python3 main.py --cuda <gpu id> --resume 				# Resume Training
 $ python3 main.py --cuda <gpu id> --resume --eval 			# Evaluate the model
 ```
 
